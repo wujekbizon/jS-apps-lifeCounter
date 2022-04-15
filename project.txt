@@ -1,0 +1,22 @@
+Adding new feature to main app!
+
+Things My Program Does:
+1. Display a timer
+2.Shows an animated border around timer
+
+     Possible Implementation:
+
+Event listener to watch for a click on 'start' button
+
+                                                                 
+	Emit an event stating that the timer has started     
+	Start counting down the timer				<---    Watch for this event. When it occurs, draw the border
+                                                                 
+     
+	Emit an event that the timer has 'ticked'            
+	Each time the timer counts down, update the text
+	If we counted down and timer reaches 0			<---    Watch for this event. When it occurs, update the border
+
+                                                                  
+        Emit an event that the timer is done      	     
+        Reset internal timer to get ready for another run	<---    Watch for this event. When it occurs, reset the border
