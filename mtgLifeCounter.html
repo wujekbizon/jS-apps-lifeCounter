@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LifeCounter</title>
+    <link
+      rel="stylesheet"
+      href=" https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-half is-offset-one-quarter">
+            <div class="card">
+              <figure class="image is-16by9">
+                <img
+                  src="https://i.etsystatic.com/20027840/r/il/fb0742/3326502891/il_340x270.3326502891_q8g7.jpg"
+                />
+              </figure>
+              <header class="card-header has-background-info-dark">
+                <p
+                  class="card-header-title is-size-5 has-text-weight-normal has-text-info-light is-uppercase ml-4 pt-0 pb-0"
+                >
+                  Mtg Life Counter<span
+                    class="is-size-7 is-italic has-text-link-light ml-6"
+                    >Made by Greg Wolfinger</span
+                  >
+                </p>
+              </header>
+              <div class="card-content has-background-grey-light">
+                <div class="content">
+                  <div class="card-header-title pt-0 pb-5">
+                    <input
+                      class="input is-small mr-5"
+                      type="text "
+                      id="p1Input"
+                      placeholder="Enter name:"
+                    />
+                    <input
+                      class="input is-small ml-5"
+                      type="text"
+                      id="p2Input"
+                      placeholder="Enter name"
+                    />
+                  </div>
+                  <div class="columns">
+                    <div class="column has-text-centered">
+                      <p class="subtitle 4">
+                        <span id="p1Name" class="">Player 1</span>
+                      </p>
+                    </div>
+                    <div class="column has-text-centered">
+                      <p class="subtitle 4">
+                        <span id="p2Name" class="">Player 2</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="columns">
+                    <div class="column has-text-centered">
+                      <h2 class="title is-1 has-text-black is-family-monospace">
+                        <span class="" id="p1Display">20</span>
+                      </h2>
+                    </div>
+                    <div class="column has-text-centered">
+                      <h2 class="title is-1 has-text-black is-family-monospace">
+                        <span class="" id="p2Display">20</span>
+                      </h2>
+                    </div>
+                  </div>
+                  <p
+                    class="is-size-6 has-text-black is-uppercase has-text-centered"
+                  >
+                    Use the buttons below to track your life
+                  </p>
+                  <label
+                    class="is-size-4 has-text-black is-flex is-justify-content-center has-text-weight-medium"
+                    for=""
+                  >
+                    Starting Life
+                    <div class="select is-small is-info mt-1 ml-2">
+                      <select
+                        class="has-text-black has-background-info-light"
+                        name=""
+                        id="playTo"
+                      >
+                        <option value="20">20</option>
+                        <option value="40">40</option>
+                      </select>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button
+                  class="card-footer-item button is-link is-outlined is-normal"
+                  id="p1Btn1"
+                >
+                  +1 Life
+                </button>
+                <button
+                  class="card-footer-item button is-danger is-outlined is-normal"
+                  id="reset"
+                >
+                  Reset
+                </button>
+                <button
+                  class="card-footer-item button is-primary is-outlined is-normal"
+                  id="p2Btn1"
+                >
+                  +1 Life
+                </button>
+              </div>
+
+              <footer class="card-footer">
+                <button
+                  class="card-footer-item button is-link is-outlined is-normal"
+                  id="p1Btn2"
+                >
+                  -1 Life
+                </button>
+                <button
+                  class="card-footer-item button is-primary is-outlined is-normal"
+                  id="p2Btn2"
+                >
+                  -1 Life
+                </button>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="mtgLifeCounter.js"></script>
+  </body>
+</html>
