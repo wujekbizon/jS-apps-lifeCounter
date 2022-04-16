@@ -20,7 +20,8 @@ class Timer {
   };
   // define tick method
   thick = () => {
-    console.log('thick');
+    const timeRemaining = parseFloat(this.durationInput.value);
+    this.durationInput.value = timeRemaining - 1;
   };
 }
 
