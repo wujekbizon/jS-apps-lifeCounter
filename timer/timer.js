@@ -24,7 +24,7 @@ class Timer {
     }
 
     this.thick();
-    this.intervalId = setInterval(this.thick, 1000);
+    this.intervalId = setInterval(this.thick, 50);
   };
   // define pause method
   pause = () => {
@@ -39,7 +39,7 @@ class Timer {
         this.onComplete();
       }
     } else {
-      this.timeRemaining = this.timeRemaining - 1;
+      this.timeRemaining = this.timeRemaining - 0.05;
       // check if onThick callback
       if (this.onThick) {
         this.onThick();
@@ -52,6 +52,6 @@ class Timer {
   }
 
   set timeRemaining(time) {
-    this.durationInput.value = time;
+    this.durationInput.value = time.toFixed(2);
   }
 }
