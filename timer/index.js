@@ -1,9 +1,14 @@
 // create class Timer
 class Timer {
-  constructor(durationInput, startButton, pauseButton) {
+  constructor(durationInput, startButton, pauseButton, callbacks) {
     this.durationInput = durationInput;
     this.startButton = startButton;
     this.pauseButton = pauseButton;
+
+    // to say that callbacks are optionals I use if statement
+    if (callbacks) {
+      this.onStart = callbacks.onStart;
+    }
 
     // addEventListener for start and pause buttons
     this.startButton.addEventListener('click', this.start);
@@ -11,6 +16,11 @@ class Timer {
   }
   // define start method
   start = () => {
+    // check to see if onStart callback
+    if (this.onStart) {
+      this.onStart();
+    }
+
     this.thick();
     this.intervalId = setInterval(this.thick, 1000);
   };
@@ -42,4 +52,11 @@ const startButton = document.querySelector('#start');
 const pauseButton = document.querySelector('#pause');
 
 // create instance of the timer and pass three elements
-const timer = new Timer(durationInput, startButton, pauseButton);
+// add callbacks as fourth argument
+const timer = new Timer(durationInput, startButton, pauseButton, {
+  onStart() {
+    console.log('Timer started');
+  },
+  onThick() {},
+  onComplete() {},
+});
