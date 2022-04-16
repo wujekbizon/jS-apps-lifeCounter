@@ -20,11 +20,13 @@ class Timer {
   };
   // define tick method
   thick = () => {
-    this.timeRemaining = this.timeRemaining - 1;
+    if (this.timeRemaining <= 0) {
+      this.pause();
+    } else {
+      this.timeRemaining = this.timeRemaining - 1;
+    }
   };
-
   // define getter and setter methods to extract durationInput value of thick method
-
   get timeRemaining() {
     return parseFloat(this.durationInput.value);
   }
