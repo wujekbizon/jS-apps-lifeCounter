@@ -20,11 +20,11 @@ class Timer {
   start = () => {
     // check to see if onStart callback
     if (this.onStart) {
-      this.onStart();
+      this.onStart(this.timeRemaining);
     }
 
     this.thick();
-    this.intervalId = setInterval(this.thick, 50);
+    this.intervalId = setInterval(this.thick, 20);
   };
   // define pause method
   pause = () => {
@@ -39,10 +39,10 @@ class Timer {
         this.onComplete();
       }
     } else {
-      this.timeRemaining = this.timeRemaining - 0.05;
+      this.timeRemaining = this.timeRemaining - 0.02;
       // check if onThick callback
       if (this.onThick) {
-        this.onThick();
+        this.onThick(this.timeRemaining);
       }
     }
   };

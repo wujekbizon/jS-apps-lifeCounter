@@ -10,14 +10,17 @@ circle.setAttribute('stroke-dasharray', perimeter);
 
 // create instance of the timer and pass those elements
 // add callbacks as fourth argument
-let currentOffset = 0;
+let duration;
 const timer = new Timer(durationInput, startButton, pauseButton, {
-  onStart() {
-    console.log('Timer started');
+  onStart(totalDuration) {
+    duration = totalDuration;
   },
-  onThick() {
-    circle.setAttribute('stroke-dashoffset', currentOffset);
-    currentOffset = currentOffset - 1;
+  onThick(timeRemaining) {
+    circle.setAttribute(
+      'stroke-dashoffset',
+      // offset calculation
+      (perimeter * timeRemaining) / duration - perimeter
+    );
   },
   onComplete() {
     console.log('Timer is completed');
