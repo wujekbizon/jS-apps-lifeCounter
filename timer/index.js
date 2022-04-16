@@ -8,6 +8,8 @@ class Timer {
     // to say that callbacks are optionals I use if statement
     if (callbacks) {
       this.onStart = callbacks.onStart;
+      this.onThick = callbacks.onThick;
+      this.onComplete = callbacks.onComplete;
     }
 
     // addEventListener for start and pause buttons
@@ -32,8 +34,16 @@ class Timer {
   thick = () => {
     if (this.timeRemaining <= 0) {
       this.pause();
+      //when timer is done check if isComplete callback
+      if (this.onComplete) {
+        this.onComplete();
+      }
     } else {
       this.timeRemaining = this.timeRemaining - 1;
+      // check if onThick callback
+      if (this.onThick) {
+        this.onThick();
+      }
     }
   };
   // define getter and setter methods to extract durationInput value of thick method
@@ -57,6 +67,10 @@ const timer = new Timer(durationInput, startButton, pauseButton, {
   onStart() {
     console.log('Timer started');
   },
-  onThick() {},
-  onComplete() {},
+  onThick() {
+    console.log('Timer just tick down');
+  },
+  onComplete() {
+    console.log('Timer is completed');
+  },
 });
