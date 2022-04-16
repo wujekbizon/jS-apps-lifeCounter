@@ -9,13 +9,14 @@
       rel="stylesheet"
       href=" https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
     />
+    <link rel="stylesheet" href="css/timer.css" />
   </head>
 
   <body>
     <section class="section">
       <div class="container">
         <div class="columns">
-          <div class="column is-half is-offset-one-quarter">
+          <div class="column is-half">
             <div class="card">
               <figure class="image is-16by9">
                 <img
@@ -131,6 +132,29 @@
                   -1 Life
                 </button>
               </footer>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="timer">
+              <div class="controls">
+                <input id="duration" value="3" />
+                <div>
+                  <button id="start"><i class="fas fa-play"></i></button>
+                  <button id="pause"><i class="fas fa-pause"></i></button>
+                </div>
+              </div>
+              <svg class="dial">
+                <circle
+                  id="circle"
+                  fill="transparent"
+                  stroke="#2f3542"
+                  stroke-width="10"
+                  r="190"
+                  cx="0"
+                  cy="200"
+                  transform="rotate(-90 100 100)"
+                />
+              </svg>
             </div>
           </div>
         </div>
