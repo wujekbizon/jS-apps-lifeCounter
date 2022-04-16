@@ -21,13 +21,13 @@ body {
   display: block;
   border: none;
   width: 240px;
-  font-size: 80px;
+  font-size: 64px;
   text-align: center;
 }
 
 .timer button {
   border: none;
-  font-size: 36px;
+  font-size: 30px;
   cursor: pointer;
 }
 

@@ -17,7 +17,7 @@ const p2 = {
 };
 
 p1.input.addEventListener('input', function () {
-  p1.name.textContent = p1.input.value.toUpperCase();
+  p1.name.textContent = p1.input.value;
   p1.input.addEventListener('keypress', function (event) {
     if (event.key === 'Enter') {
       p1.input.value = '';
@@ -44,7 +44,7 @@ p2.input.addEventListener('focusout', (event) => {
 });
 
 p2.input.addEventListener('input', function () {
-  p2.name.textContent = p2.input.value.toUpperCase();
+  p2.name.textContent = p2.input.value;
   p2.input.addEventListener('keypress', function (event) {
     if (event.key === 'Enter') {
       p2.input.value = '';

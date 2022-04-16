@@ -20,23 +20,40 @@
     <section class="section">
       <div class="container">
         <div class="columns">
-          <div class="column is-half">
-            <div class="card">
-              <figure class="image is-16by9">
-                <img
-                  src="https://i.etsystatic.com/20027840/r/il/fb0742/3326502891/il_340x270.3326502891_q8g7.jpg"
-                />
-              </figure>
+          <div class="column is-6 is-offset-3">
+            <div class="card has-background-info-light">
               <header class="card-header has-background-info-dark">
-                <p
-                  class="card-header-title is-size-5 has-text-weight-normal has-text-info-light is-uppercase ml-4 pt-0 pb-0"
-                >
-                  Mtg Life Counter<span
-                    class="is-size-7 is-italic has-text-link-light ml-6"
-                    >Made by Greg Wolfinger</span
-                  >
-                </p>
+                <p class="card-header-title has-text-black">Mtg Life Counter</p>
               </header>
+              <div class="timer is-flex is-justify-content-center">
+                <div class="controls">
+                  <input
+                    class="has-background-info-light"
+                    id="duration"
+                    value="30"
+                  />
+                  <div>
+                    <button class="has-background-info-light" id="start">
+                      <i class="fas fa-play"></i>
+                    </button>
+                    <button class="has-background-info-light" id="pause">
+                      <i class="fas fa-pause"></i>
+                    </button>
+                  </div>
+                </div>
+                <svg class="dial">
+                  <circle
+                    id="circle"
+                    fill="transparent"
+                    stroke="#0a3d62"
+                    stroke-width="4"
+                    r="150"
+                    cx="0"
+                    cy="200"
+                    transform="rotate(-90 100 100)"
+                  />
+                </svg>
+              </div>
               <div class="card-content has-background-grey-light">
                 <div class="content">
                   <div class="card-header-title pt-0 pb-5">
@@ -55,13 +72,13 @@
                   </div>
                   <div class="columns">
                     <div class="column has-text-centered">
-                      <p class="subtitle 4">
-                        <span id="p1Name" class="">Player 1</span>
+                      <p class="subtitle 4 has-text-black">
+                        <span id="p1Name">Player 1</span>
                       </p>
                     </div>
                     <div class="column has-text-centered">
-                      <p class="subtitle 4">
-                        <span id="p2Name" class="">Player 2</span>
+                      <p class="subtitle 4 has-text-black">
+                        <span id="p2Name">Player 2</span>
                       </p>
                     </div>
                   </div>
@@ -136,29 +153,6 @@
                   -1 Life
                 </button>
               </footer>
-            </div>
-          </div>
-          <div class="column is-half">
-            <div class="timer">
-              <div class="controls">
-                <input id="duration" value="3" />
-                <div>
-                  <button id="start"><i class="fas fa-play"></i></button>
-                  <button id="pause"><i class="fas fa-pause"></i></button>
-                </div>
-              </div>
-              <svg class="dial">
-                <circle
-                  id="circle"
-                  fill="transparent"
-                  stroke="#2f3542"
-                  stroke-width="10"
-                  r="190"
-                  cx="0"
-                  cy="200"
-                  transform="rotate(-90 100 100)"
-                />
-              </svg>
             </div>
           </div>
         </div>
