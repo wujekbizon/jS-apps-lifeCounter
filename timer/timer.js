@@ -4,14 +4,12 @@ class Timer {
     this.durationInput = durationInput;
     this.startButton = startButton;
     this.pauseButton = pauseButton;
-
     // to say that callbacks are optionals I use if statement
     if (callbacks) {
       this.onStart = callbacks.onStart;
       this.onThick = callbacks.onThick;
       this.onComplete = callbacks.onComplete;
     }
-
     // addEventListener for start and pause buttons
     this.startButton.addEventListener('click', this.start);
     this.pauseButton.addEventListener('click', this.pause);
@@ -22,7 +20,6 @@ class Timer {
     if (this.onStart) {
       this.onStart(this.timeRemaining);
     }
-
     this.thick();
     this.intervalId = setInterval(this.thick, 20);
   };
@@ -52,6 +49,14 @@ class Timer {
   }
 
   set timeRemaining(time) {
-    this.durationInput.value = time.toFixed(2);
+    return (this.durationInput.value = time.toFixed(2));
   }
+  // add audio on complete
+  play = () => {
+    const audio = new Audio(
+      // early version of feature
+      'https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3'
+    );
+    audio.play();
+  };
 }
