@@ -21,6 +21,10 @@ class Timer {
       this.onStart(this.timeRemaining);
     }
     this.thick();
+    // if old interval is stiil runing clear it
+    if (this.intervalId !== null) {
+      clearInterval(this.intervalId);
+    }
     this.intervalId = setInterval(this.thick, 20);
   };
   // define pause method
