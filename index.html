@@ -20,23 +20,19 @@
     <section class="section">
       <div class="container">
         <div class="columns">
-          <div class="column is-6 is-offset-3">
+          <div class="column is-8 is-offset-2">
             <div class="card has-background-info-light">
               <header class="card-header has-background-info-dark">
                 <p class="card-header-title has-text-black">Mtg Life Counter</p>
               </header>
-              <div class="timer is-flex is-justify-content-center">
+              <div class="timer is-flex is-justify-content-center timer-image">
                 <div class="controls">
-                  <input
-                    class="has-background-info-light"
-                    id="duration"
-                    value="30"
-                  />
+                  <input class="timer-input" id="duration" value="30" />
                   <div>
-                    <button class="has-background-info-light" id="start">
+                    <button class="timer-button" id="start">
                       <i class="fas fa-play"></i>
                     </button>
-                    <button class="has-background-info-light" id="pause">
+                    <button class="timer-button" id="pause">
                       <i class="fas fa-pause"></i>
                     </button>
                   </div>
@@ -54,7 +50,7 @@
                   />
                 </svg>
               </div>
-              <div class="card-content has-background-grey-light">
+              <div class="card-content has-background-info">
                 <div class="content">
                   <div class="card-header-title pt-0 pb-5">
                     <input
@@ -118,21 +114,21 @@
                   </label>
                 </div>
               </div>
-              <div class="card-footer">
+              <div class="card-footer has-background-info">
                 <button
-                  class="card-footer-item button is-link is-outlined is-normal"
+                  class="card-footer-item button is-success is-normal has-text-black"
                   id="p1Btn1"
                 >
                   +1 Life
                 </button>
                 <button
-                  class="card-footer-item button is-danger is-outlined is-normal"
+                  class="card-footer-item button is-warning is-normal has-text-black"
                   id="reset"
                 >
                   Reset
                 </button>
                 <button
-                  class="card-footer-item button is-primary is-outlined is-normal"
+                  class="card-footer-item button is-success is-normal has-text-black"
                   id="p2Btn1"
                 >
                   +1 Life
@@ -141,13 +137,13 @@
 
               <footer class="card-footer">
                 <button
-                  class="card-footer-item button is-link is-outlined is-normal"
+                  class="card-footer-item button is-danger is-normal has-text-black"
                   id="p1Btn2"
                 >
                   -1 Life
                 </button>
                 <button
-                  class="card-footer-item button is-primary is-outlined is-normal"
+                  class="card-footer-item button is-danger is-normal has-text-black"
                   id="p2Btn2"
                 >
                   -1 Life

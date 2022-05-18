@@ -8,6 +8,20 @@
   display: inline-block;
 }
 
+.timer-image {
+  background-image: url('https://i.postimg.cc/nr8ZcryC/43e97ea8100bd47c7a2fec610f8e8ca9.jpg');
+  background-size: cover;
+}
+
+.timer-input {
+ 
+  background:none ;
+}
+
+.timer-button {
+  background:none;
+}
+
 * {
   font: inherit;
 }
@@ -15,6 +29,10 @@
 body {
   font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
     'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  background: url('https://i.ebayimg.com/images/g/kawAAOSwJbVeZYzs/s-l1600.jpg');
+  background-size: contain;
+  height: 100vh;
 }
 
 .timer input {

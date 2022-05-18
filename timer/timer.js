@@ -33,17 +33,23 @@ class Timer {
   };
   // define tick method
   thick = () => {
-    if (this.timeRemaining <= 0) {
+    console.log(this.timeRemaining);
+    if (!this.timeRemaining) {
       this.pause();
-      //when timer is done check if isComplete callback
-      if (this.onComplete) {
-        this.onComplete();
-      }
+      this.timeRemaining = 0;
     } else {
-      this.timeRemaining = this.timeRemaining - 0.02;
-      // check if onThick callback
-      if (this.onThick) {
-        this.onThick(this.timeRemaining);
+      if (this.timeRemaining <= 0) {
+        this.pause();
+        //when timer is done check if isComplete callback
+        if (this.onComplete) {
+          this.onComplete();
+        }
+      } else {
+        this.timeRemaining = this.timeRemaining - 0.02;
+        // check if onThick callback
+        if (this.onThick) {
+          this.onThick(this.timeRemaining);
+        }
       }
     }
   };
