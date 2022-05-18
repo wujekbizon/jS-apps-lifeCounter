@@ -1,3 +1,9 @@
+#section {
+  background: url('https://i.ebayimg.com/images/g/kawAAOSwJbVeZYzs/s-l1600.jpg');
+  background-size: contain;
+  height: 100vh;
+}
+
 .dial {
   height: 400px;
   width: 400px;
@@ -23,16 +29,14 @@
 }
 
 * {
+  box-sizing: border-box;
   font: inherit;
 }
 
 body {
   font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
     'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
-  background: url('https://i.ebayimg.com/images/g/kawAAOSwJbVeZYzs/s-l1600.jpg');
-  background-size: contain;
-  height: 100vh;
+  
 }
 
 .timer input {
@@ -67,4 +71,11 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+@media (max-width: 720px) {
+  #section {
+    background-size: cover;
+    height: 100%;
+  }
 }
